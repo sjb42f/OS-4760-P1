@@ -2,6 +2,5 @@
 
 Git Repository: https://www.github.com/sjb42f/OS-4760-P1/
 
-Description
-
-This project uses two source files, oss.c and user.c, in addition to a makefile to create two executables, oss and user. 
+## Description
+This project uses a makefile to compile the source files `oss.c` and `user.c` simultaneously. `oss.c` is the . `user.c` is the user processes
