@@ -1,21 +1,26 @@
-# SERENA BRIZARD
-PROJECT 1 SKELETON MULTIPLE PROCESSES
-UMSL CS 4760 OPERATING SYSTEMS
-TERM SPRING 2024 #
+# SERENA BRIZARD #
+# PROJECT 1 SKELETON MULTIPLE PROCESSES #
+# UMSL CS 4760 OPERATING SYSTEMS #
+# TERM SPRING 2024 #
 
-CC = gcc
-CFLAGS = -g
+CC = gcc -g3
+CFLAGS = -g3
 
 .DEFAULT_GOAL
 all: user oss
 
-.SUFFIXES: .c .o
-user.o : user.c
-		$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+oss: oss.o
+	$(CC) -o oss oss.o
+user: user.o
+	$(CC) -o user user.o
 
-user.o : user.c
-		$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+oss.o: oss.c
+	$(CC) $(CFLAGS) -c oss.c
+
+user.o: user.c
+	$(CC) $(CFLAGS) -c user.c
 
 .PHONY: clean
 clean:
-  rm -f *.c *.o all
+  /bin/rm -f *.o all
