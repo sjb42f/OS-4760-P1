@@ -8,7 +8,7 @@ Git Repository: https://www.github.com/sjb42f/brizard.1/
 This project uses a makefile to compile the source files `oss.c` and `user.c` simultaneously. `oss.c` is takes in user input to either run the program or print a help menu.  If the user chooses [-h], a screen will display the directions for running the program as well as what each of the variables mean.  If the user chooses to run the program, they must specify what each variable's value to be respectively.  `user.c` is the code for running each of the iterations for the `simul` amount of user processes launched at the same time.
 
 ## Program Input
-The program will be run with the command: `.oss/ [-h] [-n proc -s simul -t iter].`  If you choose to run the program you must also specify the values you want to use for each variable.
+The program will be run with the command: `./oss [-h] [-n proc -s simul -t iter].`  If you choose to run the program you must also specify the values you want to use for each variable.
 Example: I want to launch 6 user processes, while only allowing 1 to run at a time, and require each user process to do 4 iterations.
 `./oss -n 6 -s 1 -t 4`
 
